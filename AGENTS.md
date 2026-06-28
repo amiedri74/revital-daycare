@@ -4,37 +4,39 @@
 Static daycare site — 5 flat HTML pages, 1 CSS, 1 JS. Open files directly in browser. No build step, no package.json.
 
 ## Current state
-- All placeholders in HTML files have been replaced with real content
-- **Only remaining placeholder**: `[YOUR_FORM_ID]` in `contact.html:114`
-- **Missing files that will break the site**: `images/` directory (22 images referenced), `favicon.ico`
+- All 22 images, favicon.ico, and og-image.jpg exist
+- No remaining placeholders in HTML
 - **Domain is still placeholder** `revitaldaycare.com` — must update in: `robots.txt`, `sitemap.xml`, OG URLs in all HTML `<head>`s, JSON-LD `url` fields
-- **Staff**: Revital Edry (Teacher, founder) and Itamar Nadjar (Assistant) — do not reintroduce demo names
+- **Staff**: Revital Edry (Teacher, founder) and Itamar Nadjar (Assistant)
 - **Contact**: 20628 Londelius St, Winnetka, CA 91306 | (818) 943-5983 | revitaldaycare@gmail.com
 - **Hours**: Mon-Fri 6:30 AM - 6:00 PM
+- SEO score: **81/100** | GEO score: **76/100**
 
-## Audit focus
-User focus is "audit website". Key reference reports:
-- `SEO-AUDIT.md` — Score 72/100, deployment checklist
-- `GEO-ANALYSIS.md` — Score 73/100, AI search readiness
+## Audit results
+- `SEO-AUDIT.md` — Score 81/100, deployment checklist
+- `GEO-ANALYSIS.md` — Score 76/100, AI search readiness
 
 ## Contact form
-Form posts to Formspree (`https://formspree.io/f/[YOUR_FORM_ID]`). Requires a real Formspree form ID.
+Uses `mailto:revitaldaycare@gmail.com` via JavaScript — opens email app. No server-side submission.
 
 ## Images
-All photos use `<img src="images/...">` tags. The `images/` directory does not exist yet — must be created before deploy. Gallery images are organized into 3 categories (infants, toddlers, preschoolers).
+All 22 photos exist in `images/` with descriptive alt text and proper dimensions. Gallery organized into 3 categories (classrooms, activities, special moments).
 
 ## SEO files
-- `robots.txt` — configured to allow AI search crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot), block training crawlers (CCBot, anthropic-ai)
-- `sitemap.xml` — 6 URLs, lastmod dates should be updated on deploy
-- `llms.txt` — AI crawler content summary, update if content changes
+- `robots.txt` — allows GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot; blocks CCBot, anthropic-ai
+- `sitemap.xml` — 5 URLs, lastmod 2026-06-27
+- `llms.txt` — AI crawler content summary with key business facts
 - `GEMINI.md` — empty file, likely unused
 
 ## Theming
 CSS variables in `styles.css :root`:
-- `--primary` (#5DADE2), `--secondary` (#F4A66D), `--accent` (#F9D971)
+- `--primary` (#2874A6), `--secondary` (#F4A66D), `--accent` (#F9D971)
 
-## Mobile menu
-`.nav-menu.active { display: flex; }` is already in `styles.css` (line 1035, inside `@media max-width: 768px`).
+## Lighthouse
+index.html: 100/100/100/100 (Perf/A11y/BP/SEO)
+Other pages: 85-99 across categories
 
-## Script.js
-`data-src` lazy loading observer exists but no HTML uses `data-src` yet — images use standard `src` attributes.
+## Deploy blockers
+1. Domain `revitaldaycare.com` is a placeholder (31 locations)
+2. No privacy policy page
+3. Contact form uses mailto: (no server-side tracking)

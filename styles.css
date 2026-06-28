@@ -261,9 +261,29 @@ section {
 
 .section-subtitle {
     font-size: 1.1rem;
-    color: #888;
+    color: #555;
     text-align: center;
     margin-bottom: 2rem;
+}
+
+/* ===== WELCOME SECTION ===== */
+
+.welcome-section {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.welcome-content h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.welcome-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 1.5rem;
 }
 
 /* ===== FEATURES SECTION ===== */
@@ -895,7 +915,7 @@ section {
 
 .form-note {
     text-align: center;
-    color: #888;
+    color: #555;
     font-size: 0.9rem;
     margin-top: 1rem;
 }
@@ -992,9 +1012,10 @@ section {
     margin-bottom: 2rem;
 }
 
-.footer-section h4 {
+.footer-section h3 {
     color: var(--accent);
     margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 .footer-section p {

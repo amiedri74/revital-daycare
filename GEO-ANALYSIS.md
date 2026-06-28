@@ -1,18 +1,18 @@
 # GEO / AI Search Readiness — Revital Daycare
 
-**Date:** 2026-06-27 (revised)
+**Date:** 2026-06-28 (revised)
 **Analysis:** Generative Engine Optimization (AEO/GEO) — source audit (site not deployed)
 **AI surfaces:** Google AI Overviews, ChatGPT web search, Perplexity, Claude
 
 ---
 
-## GEO Readiness Score: 75/100
+## GEO Readiness Score: 76/100 ▲ (+1)
 
 | Category | Weight | Score | Notes |
 |----------|--------|-------|-------|
-| Citability | 25% | 65 | Good blocks on programs/FAQ, thin on homepage |
-| Structural Readability | 20% | 85 | Clean headings, lists, FAQ, short paragraphs, <main> landmark |
-| Multi-Modal Content | 15% | 20 | No images, video, or interactive content deployed |
+| Citability | 25% | 67 | Homepage expanded, FAQ strong; staff bios enhanced |
+| Structural Readability | 20% | 87 | Clean heading hierarchy (h1→h2→h3, no skips), lists, FAQ |
+| Multi-Modal Content | 15% | 75 | 22 photos deployed with descriptive alt text |
 | Authority & Brand Signals | 20% | 65 | Real staff names, contact info, JSON-LD schemas, but no external presence |
 | Technical Accessibility | 20% | 90 | Static HTML (SSR-native), AI crawlers allowed, llms.txt, canonical tags |
 

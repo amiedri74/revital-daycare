@@ -121,23 +121,39 @@
                     </div>
                 </div>
 
-                <!-- Contact Form (Google Forms) -->
+                <!-- Contact Form -->
                 <div class="contact-form-wrapper">
                     <h2>Send us a Message</h2>
-                    <!-- TODO: Replace YOUR_GOOGLE_FORM_ID with your actual Google Forms ID -->
-                    <!-- Create a form at https://forms.google.com and paste the embed URL below -->
-                    <iframe
-                        src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform?embedded=true"
-                        width="100%"
-                        height="800"
-                        frameborder="0"
-                        marginheight="0"
-                        marginwidth="0"
-                        style="border: 0; border-radius: 12px;"
-                        loading="lazy"
-                        title="Contact Revital Daycare">
-                        Loading...
-                    </iframe>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">Your name</label>
+                            <input id="contactName" name="name" type="text" placeholder="Jane Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email address</label>
+                            <input id="contactEmail" name="email" type="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone number</label>
+                            <input id="contactPhone" name="phone" type="tel" placeholder="(818) 943-5983">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactProgram">Program of interest</label>
+                            <select id="contactProgram" name="program">
+                                <option value="General inquiry">General inquiry</option>
+                                <option value="Infant care">Infant care</option>
+                                <option value="Toddler program">Toddler program</option>
+                                <option value="Preschool program">Preschool program</option>
+                                <option value="Summer camp">Summer camp</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">How can we help?</label>
+                            <textarea id="contactMessage" name="message" rows="5" placeholder="Tell us about your child, schedule, or questions." required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                        <p id="contactFormStatus" class="form-note" role="status" aria-live="polite">Your email app will open with your message ready to send.</p>
+                    </form>
                     <p class="form-note">We'll respond within 24 business hours.</p>
                 </div>
             </div>
@@ -204,16 +220,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Revital Daycare</h4>
+                    <h3>Revital Daycare</h3>
                     <p>20628 Londelius St<br>Winnetka, CA 91306</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h3>Contact</h3>
                     <p>Phone: <a href="tel:+1-818-943-5983">(818) 943-5983</a><br>
                     Email: <a href="mailto:revitaldaycare@gmail.com">revitaldaycare@gmail.com</a></p>
                 </div>
                 <div class="footer-section">
-                    <h4>Hours</h4>
+                    <h3>Hours</h3>
                     <p>Monday - Friday<br>6:30 AM - 6:00 PM</p>
                 </div>
             </div>

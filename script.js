@@ -32,7 +32,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Contact form now uses Google Forms embed (no custom handler needed)
+    // Contact form opens a mail client with the submitted details
+    const contactForm = document.getElementById('contactForm');
+    const contactFormStatus = document.getElementById('contactFormStatus');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(contactForm);
+            const name = formData.get('name') || 'A parent';
+            const email = formData.get('email') || 'revitaldaycare@gmail.com';
+            const phone = formData.get('phone') || 'Not provided';
+            const program = formData.get('program') || 'General inquiry';
+            const message = formData.get('message') || '';
+
+            const subject = encodeURIComponent(`Website inquiry from ${name}`);
+            const body = encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nProgram interest: ${program}\n\nMessage:\n${message}`
+            );
+
+            window.location.href = `mailto:revitaldaycare@gmail.com?subject=${subject}&body=${body}`;
+
+            if (contactFormStatus) {
+                contactFormStatus.textContent = 'Your email app should open with your message ready to send.';
+            }
+        });
+    }
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
