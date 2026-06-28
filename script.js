@@ -84,24 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Lazy loading images (optional - for future image optimization)
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.add('loaded');
-                observer.unobserve(img);
-            }
-        });
-    });
-
-    document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-    });
-}
-
 // Scroll animations (optional - adds fade-in effect)
 const scrollAnimationElements = document.querySelectorAll('.feature-card, .program-card, .testimonial-card, .team-member');
 

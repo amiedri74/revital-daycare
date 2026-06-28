@@ -6,19 +6,19 @@
 
 ---
 
-## SEO Health Score: 81/100 ▲ (+3)
+## SEO Health Score: 83/100 ▲ (+2)
 
 | Category | Weight | Score | Notes |
 |----------|--------|-------|-------|
-| On-Page SEO | 20% | 94 | Titles, meta, heading order, alt text, OG/Twitter all solid |
+| On-Page SEO | 20% | 95 | Titles, meta, heading order, alt text, OG/Twitter all solid |
 | Technical SEO | 22% | 78 | Canonical tags, robots.txt, sitemap all good; no IndexNow, placeholder domain |
-| Schema / Structured Data | 10% | 82 | JSON-LD on all 5 pages (ChildCare, Organization, WebPage+ItemList, LocalBusiness) |
-| Content Quality | 23% | 65 | Homepage expanded (~600 words), bios enhanced with credentials |
-| Performance | 10% | 94 | Static site, minimal assets; unused reading-illustration.png removed |
+| Schema / Structured Data | 10% | 82 | JSON-LD on all 6 pages (ChildCare, Organization, WebPage+ItemList, LocalBusiness) |
+| Content Quality | 23% | 68 | Homepage expanded (~600 words), focused on one age group |
+| Performance | 10% | 94 | Static site, minimal assets |
 | AI Search Readiness | 10% | 75 | llms.txt, AI crawlers allowed, FAQ section; no external brand signals |
-| Images | 5% | 95 | All 22 images exist, descriptive alt text, proper sizes, lazy loading |
+| Images | 5% | 95 | All images exist, descriptive alt text, proper sizes, lazy loading |
 
-**Weighted score:** 80.8 → **81/100**
+**Weighted score:** 82.6 → **83/100**
 
 ---
 
@@ -36,6 +36,8 @@
 | Staff bios | Revital: degree in ECE + years of experience. Itamar: training + certifications |
 | Unused image | `reading-illustration.png` (2.5MB) removed — not referenced anywhere |
 | Lighthouse a11y | index.html: accessibility 88→**100**, best-practices 96→**100** |
+| Privacy policy | `privacy.html` created with WebPage schema, OG/Twitter tags, added to footer + sitemap |
+| Age range updated | Now serving ages 2-5 (preschool only). Removed infant/toddler programs, updated copy site-wide |
 
 ---
 
@@ -45,7 +47,6 @@
 - **Domain placeholder** — `revitaldaycare.com` used in sitemap.xml, robots.txt, OG URLs, and JSON-LD `url` fields (31 locations). Must replace with real domain before deploy.
 
 ### High
-- **No privacy policy** — Contact form collects names, emails, phone numbers, and child ages. Need `/privacy.html`.
 - **Contact form uses mailto:** — Opens email app instead of server-side submission. No analytics/tracking possible.
 
 ### Medium
@@ -83,8 +84,8 @@
 - [x] Expand homepage content
 - [x] Enhance staff bios
 - [x] Remove unused 2.5MB image
+- [x] Add `/privacy.html`
 - [ ] Replace `revitaldaycare.com` with real domain (31 locations)
-- [ ] Add `/privacy.html`
 - [ ] Fix contact form (server-side submission)
 - [ ] Add Google Maps embed
 - [ ] Submit sitemap to Google Search Console

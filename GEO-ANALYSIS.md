@@ -33,15 +33,16 @@
 
 ---
 
-## Structured Data (All 5 Pages)
+## Structured Data (All 6 Pages)
 
 | Page | Schema Type | Key Properties | Status |
 |------|------------|----------------|--------|
 | index.html | ChildCare | name, address, telephone, url, openingHours | ✅ |
 | about.html | Organization | name, address, telephone, email, url, founder, employee | ✅ |
-| programs.html | WebPage + ItemList | name, description, url, Service items | ✅ (new) |
-| gallery.html | WebPage | name, description, url | ✅ (new) |
+| programs.html | WebPage + ItemList | name, description, url, Service items | ✅ |
+| gallery.html | WebPage | name, description, url | ✅ |
 | contact.html | LocalBusiness | name, address, telephone, email, url, geo, openingHours | ✅ |
+| privacy.html | WebPage | name, description, url | ✅ |
 
 ---
 
@@ -58,9 +59,9 @@
 ## Passage-Level Citability
 
 ### Strong candidates (134-167 word answer blocks):
-- **Program descriptions** — Each program starts with a clear positioning statement
+- **Program description** — Clear positioning statement for preschool program
 - **FAQ section** — 6 Q&A pairs in clear question-answer format
-- **Pricing** — Specific dollar amounts ($1,300-$1,800/mo) are concrete, citable data
+- **Pricing** — Specific dollar amount ($1,300/mo) is concrete, citable data
 
 ### Needs improvement:
 - **Homepage** — No 134-167 word answer block. Add a definition statement in first 60 words
@@ -98,8 +99,9 @@
 - [x] Staff names updated to real people (Revital Edry, Itamar Nadjar)
 - [x] Contact info (NAP) consistent across all 5 pages
 - [x] FAQ section on contact.html with clear Q&A format
-- [x] JSON-LD on all 5 pages (ChildCare, Organization, WebPage, LocalBusiness)
+- [x] JSON-LD on all 6 pages (ChildCare, Organization, WebPage, LocalBusiness)
 - [x] Canonical tags on all pages
+- [x] Services consolidated to preschool (ages 2-5) with consistent messaging
 - [x] Geo coordinates in LocalBusiness schema
 - [x] OG/Twitter cards complete on all pages
 - [x] <main> landmark on all pages
