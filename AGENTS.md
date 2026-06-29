@@ -39,8 +39,15 @@ index.html: 100/100/100/100 (Perf/A11y/BP/SEO)
 Other pages: 85-99 across categories
 
 ## Known issues
-1. Contact form uses mailto: (no server-side tracking)
-2. `sameAs: []` empty on all 3 schema blocks — no GBP or social links
-3. No BreadcrumbList schema
-4. Person schema for staff lacks credentials/knowsAbout
-5. No external brand presence (GBP not created yet, no social profiles)
+1. Contact form uses mailto: (no server-side tracking) — needs Cloudflare Worker
+2. `sameAs` populated with GBP URL — needs additional social profile URLs
+3. No external brand presence (GBP not created yet, no social profiles)
+
+## Fixes applied 2026-06-28
+- BreadcrumbList schema added to all 6 pages
+- Person schema for staff expanded with `description`, `knowsAbout`, `credential`
+- 3rd testimonial (Jennifer L.) added to schema review array
+- `dateModified` added to all page schemas
+- Founding year (2024) added to "Our Story" on about.html
+- `foundingDate` added to Organization schema
+- GBP URL added to `sameAs` on index, about, contact

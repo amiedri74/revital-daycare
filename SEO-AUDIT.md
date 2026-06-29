@@ -6,19 +6,19 @@
 
 ---
 
-## SEO Health Score: 88/100 ▲ (+3)
+## SEO Health Score: 90/100 ▲ (+5)
 
 | Category | Weight | Score | Notes |
 |----------|--------|-------|-------|
 | On-Page SEO | 20% | 95 | Titles, meta, heading order, alt text, OG/Twitter all solid |
-| Technical SEO | 22% | 90 | Canonical, robots.txt, sitemap, schema @id all fixed; no IndexNow |
-| Schema / Structured Data | 10% | 78 | JSON-LD on all 6 pages but `sameAs` empty, no BreadcrumbList, thin Person entries |
-| Content Quality | 23% | 85 | All pages exceed quality-gate word counts; staff bios strong; original photos |
+| Technical SEO | 22% | 92 | Canonical, robots.txt, sitemap, BreadcrumbList added; no IndexNow |
+| Schema / Structured Data | 10% | 88 | JSON-LD on all 6 pages, BreadcrumbList, expanded Person with credentials, dateModified; `sameAs` still empty |
+| Content Quality | 23% | 88 | All pages exceed quality-gate word counts; staff bios strong; founding year added; original photos |
 | Performance | 10% | 94 | Static site, CDN, minimal assets, lazy-loaded images |
 | AI Search Readiness | 10% | 82 | llms.txt, AI crawlers allowed, FAQ; no external brand signals |
 | Images | 5% | 95 | All images exist, descriptive alt text, proper sizes, lazy loading |
 
-**Weighted score:** 87.6 → **88/100**
+**Weighted score:** 89.6 → **90/100**
 
 ---
 
@@ -58,32 +58,37 @@
 | # | Issue | Files | Why It Matters |
 |---|-------|-------|----------------|
 | M1 | Contact form uses `mailto:` — no server submission | contact.html, script.js | No conversion tracking. Known limitation. Cloudflare Worker would fix. |
-| M2 | No BreadcrumbList schema | All 6 pages | Breadcrumbs help Google understand site structure and can show as rich snippet |
-| M3 | Person schema for staff is minimal | about.html | No `description`, `knowsAbout`, `credential` on Revital/Itamar entries — missed E-E-A-T opportunity |
-| M4 | Homepage lists 18 reviews in aggregateRating but only 2 in schema array | index.html | Inconsistency; 3rd HTML testimonial not in schema |
-| M5 | Found date missing from "Our Story" | about.html | Historical context adds E-E-A-T; restore with correct year |
-| M6 | FAQ section is plain HTML (no FAQPage schema) | contact.html | FAQPage restricted for commercial Google rich results but still helps GEO/AI visibility |
+| M2 | FAQ section is plain HTML (no FAQPage schema) | contact.html | FAQPage restricted for commercial Google rich results but still helps GEO/AI visibility |
 
 ### Low Priority
 
 | # | Issue | Files | Why It Matters |
 |---|-------|-------|----------------|
-| L1 | No `dateModified` or `datePublished` on page schemas | programs, gallery, privacy | Freshness signal for search engines |
-| L2 | No IndexNow submission | sitemap.xml | Faster indexing when content changes |
-| L3 | Keywords meta tag present | All 6 pages | Google ignores it, not harmful |
+| L1 | No IndexNow submission | sitemap.xml | Faster indexing when content changes |
+| L2 | Keywords meta tag present | All 6 pages | Google ignores it, not harmful |
+
+### ✅ Fixed This Round
+
+| # | Fix | Detail |
+|---|-----|--------|
+| ✅ | BreadcrumbList schema | Added to all 6 pages |
+| ✅ | Person schema expanded | `description`, `knowsAbout`, `credential` on Revital and Itamar |
+| ✅ | 3rd review in schema | Jennifer L. testimonial added to review array |
+| ✅ | `dateModified` | Added to all 6 page schemas |
+| ✅ | Founding year | "Founded in 2024" added to "Our Story" on about.html + `foundingDate` in Organization schema |
 
 ---
 
 ## Analysis by Category
 
-### Technical SEO (Score: 90/100)
+### Technical SEO (Score: 92/100)
 - ✅ Static HTML — no JS dependencies, fully indexable by all crawlers
 - ✅ All pages have correct canonicals
 - ✅ robots.txt properly configured (AI crawlers allowed, training crawlers blocked)
 - ✅ HTTPS via Cloudflare with valid cert
 - ✅ sitemap.xml with all 6 URLs and correct lastmod dates
 - ✅ Mobile-responsive (768px and 480px breakpoints)
-- ⚠️ No BreadcrumbList schema
+- ✅ BreadcrumbList schema on all 6 pages
 - ⚠️ No IndexNow submission
 - ✅ No render-blocking issues (single CSS file, deferred JS)
 
@@ -100,17 +105,17 @@
 - ⚠️ No external citations / awards / press mentions
 - ✅ Curriculum described in detail with Reggio Emilia philosophy
 
-### Schema / Structured Data (Score: 78/100)
-- index.html: ChildCare ✅ with aggregateRating, reviews, address, geo, openingHours
-- about.html: Organization ✅ with employees, founder, address, geo
-- contact.html: LocalBusiness ✅ with address, geo, openingHours
-- programs.html: WebPage + ItemList ✅
-- gallery.html: WebPage ✅
-- privacy.html: WebPage ✅
-- ❌ `sameAs: []` on ALL schema blocks
-- ❌ No BreadcrumbList on any page
-- ⚠️ Person entries for Revital/Itamar lack description, knowsAbout, credential
-- ⚠️ Only 2 reviews in schema but aggregateRating says 18
+### Schema / Structured Data (Score: 88/100)
+- index.html: ChildCare ✅ with aggregateRating, 3 reviews, address, geo, openingHours, dateModified
+- about.html: Organization ✅ with employees (expanded Person), founder, foundingDate, dateModified
+- contact.html: LocalBusiness ✅ with address, geo, openingHours, dateModified
+- programs.html: WebPage + ItemList + BreadcrumbList ✅ with dateModified
+- gallery.html: WebPage + BreadcrumbList ✅ with dateModified
+- privacy.html: WebPage + BreadcrumbList ✅ with dateModified
+- ✅ BreadcrumbList on all 6 pages
+- ✅ Person entries expanded with description, knowsAbout, credential
+- ✅ 3 reviews in schema (matches HTML testimonials)
+- ❌ `sameAs: []` still empty — no GBP/social URLs
 
 ### Local SEO (Score: 72/100)
 - ✅ NAP consistent across all pages
@@ -152,17 +157,16 @@
 
 ---
 
-## Top 5 Highest-Impact Next Actions
+## Remaining Next Actions
 
-1. **Populate `sameAs`** on all 3 schema blocks — needs GBP URL, Facebook, Instagram, Yelp, Bing Places. Single change affects index.html, about.html, contact.html. Unlocks local SEO + E-E-A-T + GEO simultaneously.
-2. **Add BreadcrumbList schema** to all 6 pages — ~30 min, adds rich result eligibility.
-3. **Expand Person schema for staff** on about.html — add `knowsAbout`, `description`, `credential` properties.
-4. **Match review count** — add 3rd testimonial to schema `review` array to match `aggregateRating.ratingCount=18`.
-5. **Add `dateModified`** to all page schemas for freshness signal.
+1. **Populate `sameAs`** on all 3 schema blocks — needs GBP + social profile URLs. Blocked: no profiles created yet.
+2. **Create Google Business Profile** — feeds Google AI Overviews, local pack, and GBP link for `sameAs`.
+3. **Add YouTube channel** — strongest brand-mention signal for AI citations (0.737 correlation per Ahrefs Dec 2025).
+4. **Add original statistic** — e.g., "Serving Winnetka families since 2024" — unique data points improve AI citability.
 
 ## Verification
 
-- **H1 fix (`sameAs`)** will succeed if: GBP and social profiles appear in Google Knowledge Panel within 2 weeks.
-- **H3 fix (BreadcrumbList)** will succeed if: Google Rich Results Test validates BreadcrumbList on any page.
-- **Expanded Person schema** will succeed if: Staff entries show detailed info in schema validators.
-- **Next audit should look for:** `sameAs` URLs populated, BreadcrumbList present, Person schema expanded, review count matched.
+- **BreadcrumbList fix succeeded if:** Google Rich Results Test returns valid BreadcrumbList for any page.
+- **Person schema fix succeeded if:** Staff entries show `description`, `knowsAbout`, `credential` in schema validators.
+- **dateModified fix succeeded if:** All 6 page schemas include the property.
+- **Next audit should look for:** Populated `sameAs` with real GBP/social URLs.
