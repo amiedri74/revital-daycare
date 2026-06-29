@@ -7,8 +7,8 @@ Static daycare site — 6 flat HTML pages, 1 CSS, 1 JS. Open files directly in b
 - All 22 images, favicon.ico, and og-image.jpg exist
 - No remaining placeholders in HTML
 - **Serves ages 2-5** (preschool only) — infant/toddler programs removed
-- **Domain:** `websitedaycare.revitaldaycare.workers.dev`
-- **Deployed** to Cloudflare Workers at the above domain
+- **Domain:** `websitedaycare.pages.dev`
+- **Deployed** to Cloudflare Pages at the above domain
 - **Staff**: Revital Edry (Teacher, founder) and Itamar Nadjar (Assistant)
 - **Contact**: 20628 Londelius St, Winnetka, CA 91306 | (818) 943-5983 | revitaldaycare@gmail.com
 - **Hours**: Mon-Fri 6:30 AM - 6:00 PM

@@ -2,7 +2,7 @@
 
 **Date:** 2026-06-28 (deployed)
 **Type:** Static HTML/CSS/JS daycare website
-**Domain:** `websitedaycare.revitaldaycare.workers.dev`
+**Domain:** `websitedaycare.pages.dev` (deployed)
 
 ---
 
@@ -38,7 +38,7 @@
 | Lighthouse a11y | index.html: accessibility 88→**100**, best-practices 96→**100** |
 | Privacy policy | `privacy.html` created with WebPage schema, OG/Twitter tags, added to footer + sitemap |
 | Age range updated | Now serving ages 2-5 (preschool only). Removed infant/toddler programs, updated copy site-wide |
-| **Domain deployed** | Replaced `revitaldaycare.com` with `websitedaycare.revitaldaycare.workers.dev` in all 46 locations |
+| **Domain deployed** | Replaced `revitaldaycare.com` with `websitedaycare.pages.dev` in all 46 locations |
 | **Geo coordinates fixed** | Contact.html now matches index.html (34.2011, -118.5742) |
 | **Gallery content expanded** | Added ~220 words of descriptive text (was 156 words) |
 | **Schema @id added** | Added `@id` to programs, gallery, contact, privacy schemas |

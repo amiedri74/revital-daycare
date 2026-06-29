@@ -3,11 +3,11 @@ Last-Modified: 2026-06-28
 > Quality preschool and early childhood education in Winnetka, CA. Serving children ages 2-5 with play-based, nurturing care.
 
 ## About
-- [About Us](https://websitedaycare.revitaldaycare.workers.dev/about.html): Our story, mission, team, and facility in Winnetka, CA
-- [Programs](https://websitedaycare.revitaldaycare.workers.dev/programs.html): Preschool program details for ages 2-5
-- [Gallery](https://websitedaycare.revitaldaycare.workers.dev/gallery.html): Photos of our classrooms, activities, and special moments
-- [Contact](https://websitedaycare.revitaldaycare.workers.dev/contact.html): Schedule a tour, FAQ, and contact information
-- [Privacy Policy](https://websitedaycare.revitaldaycare.workers.dev/privacy.html): Privacy practices and data handling
+- [About Us](https://websitedaycare.pages.dev/about.html): Our story, mission, team, and facility in Winnetka, CA
+- [Programs](https://websitedaycare.pages.dev/programs.html): Preschool program details for ages 2-5
+- [Gallery](https://websitedaycare.pages.dev/gallery.html): Photos of our classrooms, activities, and special moments
+- [Contact](https://websitedaycare.pages.dev/contact.html): Schedule a tour, FAQ, and contact information
+- [Privacy Policy](https://websitedaycare.pages.dev/privacy.html): Privacy practices and data handling
 
 ## Key Facts
 - Location: 20628 Londelius St, Winnetka, CA 91306
