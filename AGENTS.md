@@ -7,11 +7,12 @@ Static daycare site — 6 flat HTML pages, 1 CSS, 1 JS. Open files directly in b
 - All 22 images, favicon.ico, and og-image.jpg exist
 - No remaining placeholders in HTML
 - **Serves ages 2-5** (preschool only) — infant/toddler programs removed
-- **Domain is still placeholder** `revitaldaycare.com` — must update in: `robots.txt`, `sitemap.xml`, OG URLs in all HTML `<head>`s, JSON-LD `url` fields
+- **Domain:** `websitedaycare.revitaldaycare.workers.dev`
+- **Deployed** to Cloudflare Workers at the above domain
 - **Staff**: Revital Edry (Teacher, founder) and Itamar Nadjar (Assistant)
 - **Contact**: 20628 Londelius St, Winnetka, CA 91306 | (818) 943-5983 | revitaldaycare@gmail.com
 - **Hours**: Mon-Fri 6:30 AM - 6:00 PM
-- SEO score: **83/100** | GEO score: **76/100**
+- SEO score: **85/100** | GEO score: **76/100**
 
 ## Audit results
 - `SEO-AUDIT.md` — Score 83/100, deployment checklist
@@ -27,7 +28,7 @@ All 22 photos exist in `images/` with descriptive alt text and proper dimensions
 - `robots.txt` — allows GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot; blocks CCBot, anthropic-ai
 - `sitemap.xml` — 6 URLs, lastmod 2026-06-28
 - `llms.txt` — AI crawler content summary with key business facts
-- `GEMINI.md` — empty file, likely unused
+- `GEMINI.md` — removed (was empty)
 
 ## Theming
 CSS variables in `styles.css :root`:
@@ -37,6 +38,5 @@ CSS variables in `styles.css :root`:
 index.html: 100/100/100/100 (Perf/A11y/BP/SEO)
 Other pages: 85-99 across categories
 
-## Deploy blockers
-1. Domain `revitaldaycare.com` is a placeholder (31 locations)
-2. Contact form uses mailto: (no server-side tracking)
+## Known issues
+1. Contact form uses mailto: (no server-side tracking)

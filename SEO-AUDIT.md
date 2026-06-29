@@ -1,24 +1,24 @@
 # SEO Audit — Revital Daycare
 
-**Date:** 2026-06-28 (revised)
-**Type:** Static HTML/CSS/JS daycare website (source audit — site not deployed)
-**Domain:** revitaldaycare.com (placeholder — update before deploy)
+**Date:** 2026-06-28 (deployed)
+**Type:** Static HTML/CSS/JS daycare website
+**Domain:** `websitedaycare.revitaldaycare.workers.dev`
 
 ---
 
-## SEO Health Score: 83/100 ▲ (+2)
+## SEO Health Score: 85/100 ▲ (+2)
 
 | Category | Weight | Score | Notes |
 |----------|--------|-------|-------|
 | On-Page SEO | 20% | 95 | Titles, meta, heading order, alt text, OG/Twitter all solid |
-| Technical SEO | 22% | 78 | Canonical tags, robots.txt, sitemap all good; no IndexNow, placeholder domain |
+| Technical SEO | 22% | 85 | Canonical, robots.txt, sitemap, schema @id all fixed; no IndexNow |
 | Schema / Structured Data | 10% | 82 | JSON-LD on all 6 pages (ChildCare, Organization, WebPage+ItemList, LocalBusiness) |
 | Content Quality | 23% | 68 | Homepage expanded (~600 words), focused on one age group |
 | Performance | 10% | 94 | Static site, minimal assets |
 | AI Search Readiness | 10% | 75 | llms.txt, AI crawlers allowed, FAQ section; no external brand signals |
 | Images | 5% | 95 | All images exist, descriptive alt text, proper sizes, lazy loading |
 
-**Weighted score:** 82.6 → **83/100**
+**Weighted score:** 84.6 → **85/100**
 
 ---
 
@@ -38,27 +38,32 @@
 | Lighthouse a11y | index.html: accessibility 88→**100**, best-practices 96→**100** |
 | Privacy policy | `privacy.html` created with WebPage schema, OG/Twitter tags, added to footer + sitemap |
 | Age range updated | Now serving ages 2-5 (preschool only). Removed infant/toddler programs, updated copy site-wide |
+| **Domain deployed** | Replaced `revitaldaycare.com` with `websitedaycare.revitaldaycare.workers.dev` in all 46 locations |
+| **Geo coordinates fixed** | Contact.html now matches index.html (34.2011, -118.5742) |
+| **Gallery content expanded** | Added ~220 words of descriptive text (was 156 words) |
+| **Schema @id added** | Added `@id` to programs, gallery, contact, privacy schemas |
+| **Schema priceRange added** | Added `$$` to index.html and contact.html schemas |
+| **Meta description trimmed** | about.html meta description now 159 chars (was 162) |
+| **Stale comments removed** | 13 `<!-- Image missing -->` comments across gallery.html and about.html |
+| **Image dimensions + lazy loading** | Added width/height + loading=lazy to all 15 gallery + team images |
+| **Orphan files deleted** | Removed `toddler-play.jpg` and `GEMINI.md` |
 
 ---
 
 ## Remaining Issues
 
-### Critical (block deploy)
-- **Domain placeholder** — `revitaldaycare.com` used in sitemap.xml, robots.txt, OG URLs, and JSON-LD `url` fields (31 locations). Must replace with real domain before deploy.
-
 ### High
 - **Contact form uses mailto:** — Opens email app instead of server-side submission. No analytics/tracking possible.
 
 ### Medium
+- **No social media / GBP links** — Add `sameAs` to schema when profiles are created.
 - **Founded date missing** — "Our Story" omits the founding year. Restore with correct year.
-- **No social media links** — Footer lacks Instagram, Facebook, or other social profiles.
 - **No blog/news section** — Adding content regularly would improve freshness signals.
 
 ### Low
-- **No external brand signals** — No GBP, LinkedIn, or directory citations established.
-- **JSON-LD missing @id** — Schemas lack stable `@id` URIs for cross-referencing.
-- **GEMINI.md empty** — 0 bytes, serves no purpose.
-- **No IndexNow** — Submit on deploy for faster indexing.
+- **No IndexNow** — Submit for faster indexing.
+- **Google Maps embed** — Contact page still has a TODO placeholder for the map.
+- **Image filenames** — `infant-classroom.jpg` and `toddler-classroom.jpg` could be renamed to age-neutral names.
 
 ---
 
@@ -85,8 +90,14 @@
 - [x] Enhance staff bios
 - [x] Remove unused 2.5MB image
 - [x] Add `/privacy.html`
-- [ ] Replace `revitaldaycare.com` with real domain (31 locations)
+- [x] Replace `revitaldaycare.com` with real domain (46 locations)
+- [x] Fix geo coordinate inconsistency across pages
+- [x] Add ~220 words of descriptive content to gallery.html
+- [x] Add `@id` URIs to all schema blocks
+- [x] Add `priceRange` to ChildCare/LocalBusiness schema
+- [x] Trim over-long meta descriptions
 - [ ] Fix contact form (server-side submission)
 - [ ] Add Google Maps embed
 - [ ] Submit sitemap to Google Search Console
 - [ ] Set up Google Business Profile
+- [ ] Create social media profiles and add `sameAs` to schema

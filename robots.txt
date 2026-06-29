@@ -27,6 +27,6 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap
-Sitemap: https://revitaldaycare.com/sitemap.xml
+Sitemap: https://websitedaycare.revitaldaycare.workers.dev/sitemap.xml
 
 Crawl-delay: 1
