@@ -12,11 +12,11 @@ Static daycare site — 6 flat HTML pages, 1 CSS, 1 JS. Open files directly in b
 - **Staff**: Revital Edry (Teacher, founder) and Itamar Nadjar (Assistant)
 - **Contact**: 20628 Londelius St, Winnetka, CA 91306 | (818) 943-5983 | revitaldaycare@gmail.com
 - **Hours**: Mon-Fri 6:30 AM - 6:00 PM
-- SEO score: **85/100** | GEO score: **76/100**
+- SEO score: **88/100** | GEO score: **82/100**
 
 ## Audit results
-- `SEO-AUDIT.md` — Score 83/100, deployment checklist
-- `GEO-ANALYSIS.md` — Score 76/100, AI search readiness
+- `SEO-AUDIT.md` — Score 88/100, full analysis with prioritized action plan
+- `GEO-ANALYSIS.md` — Score 82/100, AI search readiness with brand mention gaps
 
 ## Contact form
 Uses `mailto:revitaldaycare@gmail.com` via JavaScript — opens email app. No server-side submission.
@@ -40,3 +40,7 @@ Other pages: 85-99 across categories
 
 ## Known issues
 1. Contact form uses mailto: (no server-side tracking)
+2. `sameAs: []` empty on all 3 schema blocks — no GBP or social links
+3. No BreadcrumbList schema
+4. Person schema for staff lacks credentials/knowsAbout
+5. No external brand presence (GBP not created yet, no social profiles)
